@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    background-image: url('https://source.unsplash.com/1600x900/?nature'); /* Random nature image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.search-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    width: 500px;
+    padding: 10px 40px 10px 10px; /* Added extra padding on right for icons */
+    border: none;
+    border-radius: 24px;
+    outline: none;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(32, 33, 36, 0.12);
+    direction: ltr; /* Set default direction to left-to-right */
+}
+
+.search-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button img {
+    width: 24px;
+    fill: #000; /* Change fill color to black */
+}
+
+.clear-button {
+    position: absolute;
+    left: 0; /* Changed from right to left */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 20px;
+    display: none;
+}
+
+.shortcuts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    direction: ltr; /* Set default direction to left-to-right */
+}
+
+.shortcut {
+    width: 100px;
+    margin: 10px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.shortcut img {
+    width: 60px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.shortcut button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.language-buttons {
+    margin-top: 20px;
+}
+
+.language-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* CSS for the login button */
+.login-button {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* CSS for the modal */
+.login-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 150px;
+    margin: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #555;
+}
+
+.redirect-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.redirect-button:hover {
+    background-color: #0056b3;
+}

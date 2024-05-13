@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box-container">
+            <form action="/search" method="GET">
+                <input type="text" name="q" class="search-box" placeholder="Search again" value="{{ query }}">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+        <div class="search-options">
+            <a href="#" class="search-option active" onclick="searchAll()">All</a>
+            <a href="#" class="ai-button" onclick="searchAI()">AI Assistant</a>
+            <a href="#" class="search-option" onclick="searchImages()">Photos</a>
+            <a href="#" class="search-option" onclick="searchVideos()">Videos</a>
+            <a href="#" class="search-option" onclick="searchShopping()">Shopping</a>
+            <a href="#" class="search-option" onclick="searchNews()">News</a>
+            <a href="#" class="search-option" onclick="searchMaps()">Maps</a>
+        </div>
+        <div class="search-query">
+            Your search query: <strong>{{ query }}</strong>
+        </div>
+        <div class="ai-answer">
+            {% if ai_answer %}
+                <p>{{ ai_answer }}</p>
+            {% endif %}
+        </div>
+    </div>
+        <div class="search-results">
+            {% for result in search_results %}
+                <div class="search-result">
+                    <h2><a href="{{ result.url }}" target="_blank">{{ result.title }}</a></h2>
+                    <p>{{ result.snippet }}</p>
+                    <p><a href="{{ result.url }}" target="_blank">{{ result.url }}</a></p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="pagination">
+            {% if prev_page is defined %}
+                <a href="{{ url_for('search', q=query, page=prev_page) }}" class="active">Previous Page</a>
+            {% endif %}
+            {% if next_page is defined %}
+                <a href="{{ url_for('search', q=query, page=next_page) }}" class="active">Next Page</a>
+            {% endif %}
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>

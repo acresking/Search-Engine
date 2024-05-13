@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-box-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.search-box {
+    width: 600px;
+    padding: 10px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: #1a0dab;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #0e0b7c;
+}
+
+.search-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.search-option {
+    background-color: #1a0dab;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.search-option.active,
+.search-option:hover {
+    background-color: #0e0b7c;
+}
+
+.search-query {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #1a0dab;
+}
+
+.ai-answer {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #1a0dab;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.search-result {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.search-result h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1a0dab;
+}
+
+.search-result p {
+    font-size: 14px;
+    color: #b30000; /* Gentle red color */
+    margin-bottom: 10px;
+    white-space: pre-line; /* Ensure description text wraps and is not cut off */
+}
+
+.search-result a {
+    color: #1a0dab;
+    text-decoration: none;
+}
+
+.search-result a:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #1a0dab;
+    border: 1px solid #1a0dab;
+    border-radius: 4px;
+    margin-right: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #1a0dab;
+    color: #fff;
+}
+
+.pagination a.active {
+    background-color: #1a0dab;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.ai-button {
+    background-color: #1a0dab;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.ai-button.active,
+.ai-button:hover {
+    background-color: #0e0b7c;
+}

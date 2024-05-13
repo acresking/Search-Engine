@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Engine</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Language Selection</h2>
+    <div id="selected-language">Selected Language: English</div>
+    <div class="language-dropdown">
+        <select id="lang-dropdown" onchange="changeLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="he">עברית</option>
+            <option value="ar">العربية</option>
+            <option value="fa">فارسی</option>
+            <option value="ru">Русский</option>
+            <option value="de">Deutsch</option>
+            <option value="ro">Română</option>
+            <option value="it">Italiano</option>
+            <option value="zh">中文</option>
+            <option value="hi">हिन्दी</option>
+            <option value="es">Español</option>
+            <option value="bn">বাংলা</option>
+            <option value="ms">Bahasa Melayu</option>
+            <option value="pt">Português</option>
+            <option value="id">Bahasa Indonesia</option>
+            <option value="fr">Français</option>
+            <option value="ja">日本語</option>
+            <option value="yi">Yiddish</option>
+        </select>
+    </div>
+        <!-- Login button with custom icon -->
+        <button id="login-button" class="login-button">
+            <img src="https://icons.iconarchive.com/icons/papirus-team/papirus-status/48/avatar-default-icon.png" alt="Login">
+        </button>
+    </div>
+    <!-- Modal for login and registration -->
+    <div id="login-modal" class="login-modal">
+        <div class="modal-content">
+            <button id="close-modal" class="close-modal">&times;</button>
+            <a href="static\login.html" class="redirect-button">Login</a>
+            <a href="static\registration.html" class="redirect-button">Register</a>            
+        </div>
+    </div>    
+    <div class="container">
+        <div class="search-container">
+            <form id="search-form" action="/search" method="GET">
+                <input type="text" id="search-box" name="q" class="search-box" placeholder="Search or type a URL">
+                <button type="submit" class="search-button">
+                    <img src="https://img.icons8.com/material-sharp/24/000000/search--v1.png" alt="Search">
+                </button>
+                <button type="button" class="clear-button" onclick="clearSearchBox()">X</button>
+            </form>
+        </div>
+        <div class="shortcuts-container">
+            <a href="https://www.youtube.com" class="shortcut">
+                <img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube">
+                <div>YouTube</div>
+            </a>
+            <a href="https://mail.google.com/" class="shortcut">
+                <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="Gmail">
+                <div>Gmail</div>
+            </a>
+            <a href="https://www.tiktok.com" class="shortcut">
+                <img src="https://img.icons8.com/color/48/000000/tiktok.png" alt="TikTok">
+                <div>TikTok</div>
+            </a>
+            <a href="https://www.facebook.com" class="shortcut">
+                <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook">
+                <div>Facebook</div>
+            </a>
+            <br> <!-- Line break between rows -->
+            <a href="https://web.whatsapp.com/" class="shortcut">
+                <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+                <div>WhatsApp</div>
+            </a>
+            <a href="https://twitter.com" class="shortcut">
+                <img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter">
+                <div>Twitter</div>
+            </a>
+            <a href="https://discord.com" class="shortcut">
+                <img src="https://img.icons8.com/color/48/000000/discord--v1.png" alt="discord">
+                <div>discord</div>
+            </a>
+            <a href="https://web.telegram.org/" class="shortcut">
+                <img src="https://web.telegram.org/k/assets/img/favicon.ico?v=jw3mK7G9Ry" alt="telegram">
+                <div>telegram</div>
+            </a>
+        </div>        
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

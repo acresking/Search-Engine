@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="shared.css">
+</head>
+<body>
+    <h1>Login</h1>
+
+        <!-- Social login options (placeholders) -->
+        <div class="social-login-options">
+            <a href="{{ url_for('google_login') }}" class="social-login-button">Login with Google</a>
+            <a href="{{ url_for('facebook_login') }}" class="social-login-button">Login with Facebook</a>
+            <a href="{{ url_for('twitter_login') }}" class="social-login-button">Login with Twitter</a>
+        </div>
+
+        <!-- User status check and conditional rendering -->
+        {% if session.logged_in %}
+            <p>Welcome, {{ session.current_user.username }}!</p>
+            <a href="{{ url_for('logout') }}" class="redirect-button">Logout</a>
+        {% else %}
+            <p>You are not logged in.</p>
+            <button id="login-button" class="redirect-button">Login</button>
+            <a href="{{ url_for('registration') }}" class="redirect-button">Register</a>
+        {% endif %}
+    </div>
+
+    <!-- Login modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-modal">&times;</span>
+            <a href="login.html" class="redirect-button">Login</a>
+            <a href="registration.html" class="redirect-button">Register</a>
+        </div>
+    </div>
+    <script src="shared.js"></script>
+</body>
+</html>
