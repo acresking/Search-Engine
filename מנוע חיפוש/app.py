@@ -3,14 +3,14 @@ import requests
 import os
 
 # Wit.ai API Access Tokens
-SERVER_ACCESS_TOKEN = 'W3RBZIQGN24WOQIFPQUJTKXFNRWBTDSZ'
-CLIENT_ACCESS_TOKEN = 'NJJ5WZWLZ7KYGI7WAWYV3LK3ZZZBFMCF'
+SERVER_ACCESS_TOKEN = ''
+CLIENT_ACCESS_TOKEN = ''
 
 # Google Custom Search Engine (CSE) API key
-API_KEY = 'AIzaSyAjB_BQfGj-yzK4iNtY69U0HFeP6sgby8c'
+API_KEY = ''
 
 # Google Custom Search Engine (CSE) ID
-CSE_ID = '6291ceb07b07846dd'
+CSE_ID = ''
 
 app = Flask(__name__, template_folder="static")
 
